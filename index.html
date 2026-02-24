@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QuitBite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        🍔 <span>Quit</span><b>Bite</b>
+    </div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#">Offers</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="hero">
+
+    <div class="floating food1">🍕</div>
+    <div class="floating food2">🍔</div>
+    <div class="floating food3">🍟</div>
+    <div class="floating food4">🥤</div>
+
+    <div class="hero-content">
+        <h1>Cravings End Here.</h1>
+        <p>Premium Fast Food. Delivered Hot. Delivered Fast.</p>
+        <div class="hero-buttons">
+            <button onclick="scrollToMenu()">Order Now</button>
+            <button class="secondary-btn">View Offers</button>
+        </div>
+    </div>
+</header>
+
+<!-- FEATURED OFFERS -->
+<section class="offers">
+    <h2>🔥 Trending Now</h2>
+    <div class="offer-container">
+        <div class="offer-card">
+            <h3>Buy 1 Get 1 Free</h3>
+            <p>On All Burgers Today</p>
+        </div>
+        <div class="offer-card">
+            <h3>25% OFF</h3>
+            <p>Large Pizzas</p>
+        </div>
+        <div class="offer-card">
+            <h3>Free Dessert</h3>
+            <p>Orders Above $30</p>
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories">
+    <button onclick="filterCategory('All')">All</button>
+    <button onclick="filterCategory('Burger')">Burgers</button>
+    <button onclick="filterCategory('Pizza')">Pizza</button>
+    <button onclick="filterCategory('Beverage')">Beverages</button>
+    <button onclick="filterCategory('Dessert')">Desserts</button>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu"></section>
+
+<!-- CART -->
+<div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+        <h2>🛒 Cart</h2>
+        <button onclick="toggleCart()">—</button>
+    </div>
+    <ul id="cart-items"></ul>
+    <h3>Total: $<span id="total">0.00</span></h3>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3 id="modal-title"></h3>
+    <label>Special Instructions</label>
+    <input type="text" id="note" placeholder="Extra cheese, no onions...">
+    <label>Quantity</label>
+    <input type="number" id="quantity" value="1" min="1">
+    <button class="add-btn" onclick="addToCart()">Add To Cart</button>
+    <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
